@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lê Tuấn Anh | Portfolio</title>
+    <!-- Chèn font chữ hiện đại từ Google Fonts -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        /* Toàn bộ cấu trúc CSS tối giản và hiện đại */
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-color: #00f2fe;
+            --accent-gradient: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        /* Phần Header giới thiệu */
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-color);
+            box-shadow: 0 0 20px rgba(0, 242, 254, 0.2);
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* Các khối nội dung lớn */
+        section {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            color: var(--accent-color);
+        }
+
+        /* Grid hiển thị Kỹ năng & Sở thích */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+        }
+
+        .grid-item {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 0.95rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .grid-item:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent-color);
+            background: rgba(0, 242, 254, 0.05);
+        }
+
+        /* Nút liên kết MXH và liên hệ */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .btn-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-color);
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .btn-link:hover {
+            background: var(--accent-gradient);
+            box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+            transform: scale(1.02);
+            border-color: transparent;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- HEADER -->
+        <header>
+            <!-- Bạn có thể thay đổi link ảnh avatar bên dưới bằng ảnh của bạn -->
+            <img class="avatar" src="https://unsplash.com" alt="Avatar">
+            <h1>Lê Tuấn Anh</h1>
+            <p>Developer & Tech Enthusiast</p>
+        </header>
+
+        <!-- GIỚI THIỆU -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Chào bạn, mình là Tuấn Anh. Mình là một người đam mê công nghệ, thích khám phá lập trình, tìm tòi về các công cụ trí tuệ nhân tạo (AI) và tối ưu hóa hệ thống máy tính. Mình luôn hướng tới việc xây dựng các sản phẩm số thực tế, tối giản và chuyên nghiệp.</p>
+        </section>
+
+        <!-- KỸ NĂNG & CÔNG CỤ -->
+        <section id="skills">
+            <h2>Kỹ năng & Công cụ</h2>
+            <div class="grid">
+                <div class="grid-item">Git / GitHub</div>
+                <div class="grid-item">HTML & CSS</div>
+                <div class="grid-item">AI Tools (ChatGPT)</div>
+                <div class="grid-item">Video Editing</div>
+                <div class="grid-item">Cấu hình PC</div>
+                <div class="grid-item">UI/UX Basic</div>
+            </div>
+        </section>
+
+        <!-- LIÊN HỆ & MẠNG XÃ HỘI -->
+        <section id="contact">
+            <h2>Kết nối với mình</h2>
+            <div class="links-container">
+                <!-- Thay link profile facebook thực tế của bạn vào href dưới đây -->
+                <a href="https://www.facebook.com/profile.php?id=61574356773427&locale=vi_VN" target="_blank" class="btn-link">
+                    🌐 Ghé thăm Facebook của mình
+                </a>
+                <a href="mailto:tuandev@example.com" class="btn-link">
+                    ✉️ Gửi Email liên hệ công việc
+                </a>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>© 2026 Designed by Lê Tuấn Anh. Powered by Netlify.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
